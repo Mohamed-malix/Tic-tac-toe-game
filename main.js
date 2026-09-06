@@ -14,8 +14,8 @@
 
 
 
-function createPlayer(name){
-    let name=name;
+function createPlayer(nameOf){
+    let name=nameOf;
     let score=0;
 
     let getScore= () => score;
@@ -28,5 +28,7 @@ function createPlayer(name){
     }
 }
 
-let player1 =createPlayer(player1);
-console.log('is this working');
+const player1 =createPlayer('player1');
+const player2 =createPlayer('player2');
+console.log(player2)
+
