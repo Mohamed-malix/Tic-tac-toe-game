@@ -28,7 +28,37 @@ function createPlayer(nameOf){
     }
 }
 
+let gameBoard=[];
 const player1 =createPlayer('player1');
 const player2 =createPlayer('player2');
 console.log(player2)
 
+
+
+
+
+function addxo(){
+
+    let i=0;
+    while(i<5){
+
+        if(i%2==0){
+            let obj={};
+
+            obj.type='X';
+            obj.place= Number(prompt('The place'));
+        }
+        else{
+            let obj={};
+            obj.type='O';
+            obj.place= Number(prompt('The place'));
+
+            gameBoard.push(obj);
+            console.log(gameBoard);
+        }
+
+        i++;
+    }
+}
+
+addxo();
