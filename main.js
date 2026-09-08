@@ -7,10 +7,6 @@
 // })
 
 
-for(let i=0; i<5; i++){
-    addxo();
-    updateTurn();
-}
 
 
 function createPlayer(nameOf){
@@ -31,7 +27,7 @@ function createPlayer(nameOf){
 
 
 let gameBoard=['','','','','','','','',''];
-gameObject= ( () => {
+const gameObject= ( () => {
     let tie=0;
     let turn=1;
     incrTie= () => tie++;
@@ -46,17 +42,24 @@ gameObject= ( () => {
 
 
 function updateTurn(){
+    
     if(gameObject.turn==1){
-        gameObject.turn==2;
+       gameObject.turn=2;
     }
     else if(gameObject.turn==2){
-        gameObject.turn==1;
+        gameObject.turn=1;
 
     }else{
         alert('Invalid turn number');
     }
 }
 
+
+
+for(let i=0; i<5; i++){
+    addxo();
+    updateTurn();
+}
 
 
 function addxo(){
