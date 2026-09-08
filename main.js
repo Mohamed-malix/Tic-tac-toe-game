@@ -1,4 +1,10 @@
 
+let board= document.querySelectorAll('.board');
+board.forEach(item => {
+    item.addEventListener(e => {
+        addxo;
+    })
+})
 
 
 
@@ -16,11 +22,18 @@ function createPlayer(nameOf){
     }
 }
 
-let gameBoard=['','','','','','','','',''];
-const player1 =createPlayer('player1');
-const player2 =createPlayer('player2');
 
 
+theGameObject= ( () => {
+    let tie=0;
+    incrTie= () => tie++;
+
+    const player =createPlayer('player');
+    const computer =createPlayer('computer');
+    let gameBoard=['','','','','','','','',''];
+    
+    return {incrTie,player,computer, gameBoard};
+})()
 
 
 
@@ -78,7 +91,6 @@ function addxo(){
             n= Number(prompt("the place"));
             gameBoard[n]='O';
             console.log(gameBoard[n]);
-            
             
            if(gameBoard[0]=='O' && gameBoard[1]=='O' && gameBoard[2]==='O'){
             console.log('O win');
