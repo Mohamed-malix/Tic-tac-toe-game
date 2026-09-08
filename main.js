@@ -7,9 +7,11 @@
 // })
 
 
-for(let i=0; i<5; i++){
+onload = ()=>{
+  for (let i = 0; i < 5; i++) {
     addxo();
     updateTurn();
+  }
 }
 
 
@@ -31,6 +33,9 @@ function createPlayer(nameOf){
 
 
 let gameBoard=['','','','','','','','',''];
+
+let gameObject;
+
 gameObject= ( () => {
     let tie=0;
     let turn=1;
