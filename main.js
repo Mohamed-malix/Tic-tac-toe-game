@@ -1,10 +1,15 @@
 
-// let board= document.querySelectorAll('.board');
-// board.forEach(item => {
-//     item.addEventListener(e => {
-//         addxo();
-//     })
-// })
+let board= document.querySelectorAll('.board');
+board.forEach(item => {
+    item.addEventListener(e => {
+        checkIndex(e.target);
+    })
+
+    function checkIndex(tar){
+        console.log(Array.from(board).indexOf(tar));
+    }
+})
+
 
 
 
@@ -42,7 +47,7 @@ const gameObject= ( () => {
 
 
 function updateTurn(){
-    
+
     if(gameObject.turn==1){
        gameObject.turn=2;
     }
