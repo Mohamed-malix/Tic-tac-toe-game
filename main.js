@@ -45,6 +45,7 @@ const gameObject= ( () => {
 })();
 
 
+localStorage.setItem('board',JSON.stringify(gameBoard) );
 
 
 function updateTurn(){
@@ -75,34 +76,50 @@ function addxo(index){
 
 
            if(gameBoard[0]=='X' && gameBoard[1]=='X' && gameBoard[2]=='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
            
            }
            else if(gameBoard[3]=='X' && gameBoard[4]=='X' && gameBoard[5]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
             
            }
             else if(gameBoard[6]=='X' && gameBoard[7]=='X' && gameBoard[8]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
            }
            else if(gameBoard[0]=='X' && gameBoard[3]=='X' && gameBoard[6]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
             
            }
            else if(gameBoard[1]=='X' && gameBoard[4]=='X' && gameBoard[7]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
             
            }
            else if(gameBoard[2]=='X' && gameBoard[5]=='X' && gameBoard[8]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
 
            }
            else if(gameBoard[0]=='X' && gameBoard[4]=='X' && gameBoard[8]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
            
            }
            else if(gameBoard[2]=='X' && gameBoard[4]=='X' && gameBoard[6]==='X'){
+            gameObject.player.riseScore();
             console.log('X win');
+            console.log(gameObject.player.getScore());
             
            }
            
@@ -157,3 +174,10 @@ function addxo(index){
     
 
 
+document.querySelector('.clear').addEventListener('click', function clear(){
+    gameBoard.fill('');
+
+    board.forEach( item => {
+        item.textContent='';
+    })
+})
