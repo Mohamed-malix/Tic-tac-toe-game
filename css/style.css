@@ -65,11 +65,21 @@ h1{
 
 .footer{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
+    column-gap:45px;
 
     margin-top:85px;
+    width:40%;
 }
 
+.gameStatus{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 25px;
+    font-size: 2rem;
+}
 
 
 
