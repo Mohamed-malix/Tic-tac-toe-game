@@ -1,12 +1,13 @@
 
 let board= document.querySelectorAll('.board');
 board.forEach(item => {
-    item.addEventListener(e => {
+    item.addEventListener('click',e => {
         checkIndex(e.target);
     })
 
     function checkIndex(tar){
-        console.log(Array.from(board).indexOf(tar));
+       addxo(Array.from(board).indexOf(tar));
+       updateTurn();
     }
 })
 
@@ -61,21 +62,15 @@ function updateTurn(){
 
 
 
-for(let i=0; i<5; i++){
-    addxo();
-    updateTurn();
-}
 
 
-function addxo(){
+function addxo(index){
  
-    let n=0;
 
         if(gameObject.turn==1){
 
-            n= Number(prompt("the place"));
-            gameBoard[n]='X';
-            console.log(gameBoard[n]);
+            gameBoard[index]='X';
+            console.log(gameBoard[index]);
 
 
            if(gameBoard[0]=='X' && gameBoard[1]=='X' && gameBoard[2]=='X'){
@@ -114,9 +109,9 @@ function addxo(){
         }
         else if(gameObject.turn==2){
 
-            n= Number(prompt("the place"));
-            gameBoard[n]='O';
-            console.log(gameBoard[n]);
+
+            gameBoard[index]='O';
+            console.log(gameBoard[index]);
             
            if(gameBoard[0]=='O' && gameBoard[1]=='O' && gameBoard[2]==='O'){
             console.log('O win');
