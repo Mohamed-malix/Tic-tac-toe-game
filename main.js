@@ -89,49 +89,49 @@ function addxo(index){
            if(gameBoard[0]=='X' && gameBoard[1]=='X' && gameBoard[2]=='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
            
            }
            else if(gameBoard[3]=='X' && gameBoard[4]=='X' && gameBoard[5]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
             
            }
             else if(gameBoard[6]=='X' && gameBoard[7]=='X' && gameBoard[8]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
 
            }
            else if(gameBoard[0]=='X' && gameBoard[3]=='X' && gameBoard[6]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
             
            }
            else if(gameBoard[1]=='X' && gameBoard[4]=='X' && gameBoard[7]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
             
            }
            else if(gameBoard[2]=='X' && gameBoard[5]=='X' && gameBoard[8]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
 
            }
            else if(gameBoard[0]=='X' && gameBoard[4]=='X' && gameBoard[8]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
            
            }
            else if(gameBoard[2]=='X' && gameBoard[4]=='X' && gameBoard[6]==='X'){
             gameObject.player.riseScore();
             display();
-            console.log('X win');
+            alert('X win');
             
            }
            
@@ -151,49 +151,49 @@ function addxo(index){
            if(gameBoard[0]=='O' && gameBoard[1]=='O' && gameBoard[2]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
            
            }
            else if(gameBoard[3]=='O' && gameBoard[4]=='O' && gameBoard[5]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
           
            }
             else if(gameBoard[6]=='O' && gameBoard[7]==='O' && gameBoard[8]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
            
            }
            else if(gameBoard[0]=='O' && gameBoard[3]=='O' && gameBoard[6]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
          
            }
            else if(gameBoard[1]=='O' && gameBoard[4]=='O' && gameBoard[7]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
           
            }
            else if(gameBoard[2]=='O' && gameBoard[5]=='O' && gameBoard[8]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
             
            }
            else if(gameBoard[0]=='O' && gameBoard[4]=='O' && gameBoard[8]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
         
            }
            else if(gameBoard[2]=='O' && gameBoard[4]=='O' && gameBoard[6]==='O'){
             gameObject.computer.riseScore();
             display();
-            console.log('O win');
+            alert('O win');
            }
 
 
