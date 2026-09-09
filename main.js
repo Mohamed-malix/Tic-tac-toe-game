@@ -70,6 +70,7 @@ function addxo(index){
         if(gameObject.turn==1){
 
             gameBoard[index]='X';
+            Array.from(board)[index].textContent='X';
             console.log(gameBoard[index]);
 
 
@@ -111,6 +112,7 @@ function addxo(index){
 
 
             gameBoard[index]='O';
+            Array.from(board)[index].textContent='O';
             console.log(gameBoard[index]);
             
            if(gameBoard[0]=='O' && gameBoard[1]=='O' && gameBoard[2]==='O'){
