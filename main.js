@@ -33,7 +33,7 @@ function createPlayer(nameOf){
 
 
 
-let gameBoard=['','','','','','','','',''];
+let gameBoard= new Array(9).fill(null);
 const gameObject= ( () => {
     let tie=0;
     let turn=1;
@@ -77,65 +77,61 @@ function addxo(index){
  
 
         if(gameObject.turn==1){
-
-            gameBoard[index]='X';
-            Array.from(board)[index].textContent='X';
-            console.log(gameBoard[index]);
-
+      
+            if(gameBoard[index]==null){
+                gameBoard[index]='X';
+                Array.from(board)[index].textContent='X';
+            }
+            else{
+                alert("There is already a value in this place!")
+            }
 
            if(gameBoard[0]=='X' && gameBoard[1]=='X' && gameBoard[2]=='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
            
            }
            else if(gameBoard[3]=='X' && gameBoard[4]=='X' && gameBoard[5]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
             
            }
             else if(gameBoard[6]=='X' && gameBoard[7]=='X' && gameBoard[8]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
+
            }
            else if(gameBoard[0]=='X' && gameBoard[3]=='X' && gameBoard[6]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
             
            }
            else if(gameBoard[1]=='X' && gameBoard[4]=='X' && gameBoard[7]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
             
            }
            else if(gameBoard[2]=='X' && gameBoard[5]=='X' && gameBoard[8]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
 
            }
            else if(gameBoard[0]=='X' && gameBoard[4]=='X' && gameBoard[8]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
            
            }
            else if(gameBoard[2]=='X' && gameBoard[4]=='X' && gameBoard[6]==='X'){
             gameObject.player.riseScore();
             display();
             console.log('X win');
-            console.log(gameObject.player.getScore());
             
            }
            
@@ -144,9 +140,13 @@ function addxo(index){
         else if(gameObject.turn==2){
 
 
-            gameBoard[index]='O';
-            Array.from(board)[index].textContent='O';
-            console.log(gameBoard[index]);
+            if(gameBoard[index]==null){
+                gameBoard[index]='O';
+                Array.from(board)[index].textContent='O';
+            }
+            else{
+                alert("There is already a value in this place!")
+            }
             
            if(gameBoard[0]=='O' && gameBoard[1]=='O' && gameBoard[2]==='O'){
             gameObject.computer.riseScore();
@@ -198,7 +198,10 @@ function addxo(index){
 
 
         }
-        console.log(gameBoard);
+        if(!gameBoard.includes(null)){
+            gameObject.riseTie();
+            display();
+        }
 
             
 }
@@ -206,12 +209,13 @@ function addxo(index){
 
 
 document.querySelector('.clear').addEventListener('click', function clear(){
-    gameBoard.fill('');
+    gameBoard.fill(null);
 
     board.forEach( item => {
         item.textContent='';
     })
 })
+
 
 
 
